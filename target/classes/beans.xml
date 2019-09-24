@@ -11,9 +11,8 @@
     <context:annotation-config />
 
     <bean name="movie, movieA" class="com.stackroute.domain.Movie" scope="prototype" autowire="byName"/>
-    <bean class="com.stackroute.domain.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy">
-
-    </bean>
+    <bean name="lCycle" class="com.stackroute.domain.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"/>
+    <bean class="com.stackroute.domain.BeanPostProcessorDemoBean"/>
 
     <bean id="actor1" class="com.stackroute.domain.Actor">
         <constructor-arg name="name" value="Sreenath" />
